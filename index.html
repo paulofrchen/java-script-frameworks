@@ -1,9 +1,10 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
 	<title>Menu CSS jQuery</title>
 	<meta charset="utf-8">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script>
 	$(document).ready(function(){
 		$('#menu ul li').prepend('<span></span>');
@@ -13,38 +14,45 @@
 			});
 			$('#menu ul li').hover(function(){
 				$(this).find('span').stop().animate({
-					marginTop:"-40px"
-				},400);
+					marginLeft:"22px"
+				},200);
 			},function(){
 				$(this).find('span').stop().animate({
-					marginTop:"0px"
-				},300);
-			});
+					marginLeft:"0px"
+				},1000);
+		});
+		$('#menu ul li a').css('color','#0000ff');
+		$('#menu ul li span').css('color','#0000ff');
+		$('#menu').css('display','block');
 	});
 	</script>
 
 	<style>
-		body{background:black;
+		body{background:#6cd8d5;
 			}
-		#menu{width:700px;
+		#menu{width: 70%; /*700px*/
 			margin:auto;
            	}
 		#menu ul{list-style:none;
-			font-size:18px;
-			font-family:"Hobo Std";
+			font-size:1.125em;
+			font-family:"Verdana";
 			margin:0px;
 			padding:0px;
-			height:40px;
+			height:40px /*40px*/;
 			overflow:hidden;
+			width: 200px;
+			margin: auto;
+			height: 100%;
 			}
 		#menu ul li{float:left;
+			height: 40px;
 			}
-		#menu ul li a, #menu ul li span{width:100px;
-			padding:10px 20px;
+		#menu ul li a, #menu ul li span{width:100px; /*100px;*/
+			padding: 10px 20px;
 			height:18px;
-			color:#FFFFFF;
+			color:#6ad1cf;
 			/*background:url("images/Degrade_img.jpg") repeat-x; */
-            background:red;
+            background:#912d87;
 			text-decoration:none;
 			overflow:hidden;
 			text-align:center;
@@ -54,10 +62,10 @@
 			cursor:pointer;
 			}
 		#menu ul li a{
-			float:left;
-			background:url("images/Degrade_img.jpg") repeat-x left bottom;
-			color:#000000;
+			display: inline-block;
+			background:url("Degrade_img.jpg") repeat-x left bottom;
             height:10px;
+            border-radius:15px;
 			}
 	</style>
 </head>
